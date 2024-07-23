@@ -36,12 +36,11 @@ public class BounceCube : MonoBehaviour
 
         if (cubeMaterials.Length > 0)
         {
-            if (materialIndex >= cubeMaterials.Length)
+            materialIndex = materialIndex + 1;
+            if (cubeMaterials.Length == materialIndex)
             {
                 materialIndex = 0;
             }
-
-            materialIndex = materialIndex + 1;
             cubeRenderer.material = cubeMaterials[materialIndex];
         }
     }
